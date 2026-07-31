@@ -6,22 +6,22 @@
     <title>陈翔宇 | 个人主页</title>
 
     <!-- SEO -->
-    <meta name="description" content="陈翔宇的个人主页 - Python 开发者 & 全栈工程师。热爱编程，专注于 Web 技术、人工智能与数据科学。">
-    <meta name="keywords" content="陈翔宇, Chen Xiangyu, Python, 全栈, 个人主页, 开发者">
+    <meta name="description" content="河海大学海洋气象硕士 · 算法工程师 · 精通WRF/GSI同化与PyTorch深度学习。">
+    <meta name="keywords" content="陈翔宇, 河海大学, 海洋气象, WRF, GSI同化, Python, 算法工程师, 个人主页">
     <meta name="author" content="陈翔宇">
     <meta name="robots" content="index, follow">
 
     <!-- Open Graph（微信/社交分享预览） -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="陈翔宇 | 个人主页">
-    <meta property="og:description" content="Python 开发者 & 全栈工程师，专注于 Web 技术、人工智能与数据科学。">
+    <meta property="og:description" content="河海大学海洋气象硕士 · 算法工程师 · 精通WRF/GSI同化与PyTorch深度学习。">
     <meta property="og:url" content="https://mrchenxiangyu.github.io/">
     <meta property="og:image" content="https://avatars.githubusercontent.com/u/110710255?v=4">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="陈翔宇 | 个人主页">
-    <meta name="twitter:description" content="Python 开发者 & 全栈工程师，专注于 Web 技术、人工智能与数据科学。">
+    <meta name="twitter:description" content="河海大学海洋气象硕士 · 算法工程师 · 精通WRF/GSI同化与PyTorch深度学习。">
 
     <!-- Favicon（内联 SVG，无需额外文件） -->
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%234f46e5'/%3E%3Ctext x='32' y='44' font-size='36' font-family='Arial' font-weight='bold' fill='white' text-anchor='middle'%3EC%3C/text%3E%3C/svg%3E">
@@ -34,8 +34,9 @@
         "name": "陈翔宇",
         "url": "https://mrchenxiangyu.github.io/",
         "image": "https://avatars.githubusercontent.com/u/110710255?v=4",
-        "jobTitle": "Python Developer & Full-Stack Engineer",
-        "sameAs": ["https://github.com/mrchenxiangyu"]
+        "jobTitle": "海洋气象算法工程师",
+        "sameAs": ["https://github.com/mrchenxiangyu"],
+        "description": "河海大学海洋气象硕士，精通WRF模式与GSI同化系统，擅长Python/Matlab数据处理与机器学习。"
     }
     </script>
 
@@ -440,6 +441,60 @@
             border-top: 1px solid var(--border);
         }
 
+        /* 点赞按钮 */
+        .like-section {
+            margin-top: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: .5rem;
+            position: relative;
+            z-index: 5;
+        }
+
+        .like-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: .4rem;
+            padding: .55rem 1.2rem;
+            border-radius: 999px;
+            border: 1px solid var(--border);
+            background: #fff;
+            color: var(--muted);
+            cursor: pointer;
+            font-size: .92rem;
+            font-weight: 500;
+            transition: all .25s;
+            user-select: none;
+        }
+
+        .like-btn:hover { border-color: #e11d48; color: #e11d48; transform: translateY(-2px); box-shadow: var(--shadow-md); }
+
+        .like-btn.liked {
+            background: #fdf2f8;
+            border-color: #e11d48;
+            color: #e11d48;
+        }
+
+        .like-btn .heart {
+            font-size: 1.15rem;
+            transition: transform .3s;
+        }
+
+        .like-btn.liked .heart { animation: heartbeat .4s ease; }
+
+        .like-count {
+            font-size: .85rem;
+            color: var(--muted);
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            25% { transform: scale(1.3); }
+            50% { transform: scale(1); }
+            75% { transform: scale(1.2); }
+        }
+
         /* 返回顶部 */
         .back-to-top {
             position: fixed;
@@ -539,15 +594,14 @@
         <div class="container">
             <!-- 英雄区域 -->
             <section class="hero reveal">
-                <!-- 使用 GitHub 头像，自动获取你 GitHub 账号的头像 -->
                 <div class="avatar-wrap">
                     <img class="avatar" src="https://avatars.githubusercontent.com/u/110710255?v=4" alt="陈翔宇的头像">
                 </div>
                 <h1>陈翔宇</h1>
-                <p class="subtitle">Python 开发者 · 全栈工程师</p>
+                <p class="subtitle">海洋气象 · 算法工程师 · 2026 届硕士应届生</p>
                 <p class="description">
-                    热爱编程，专注于 Python 开发与 Web 技术，致力于创造优雅的代码与出色的用户体验。
-                    目前正在探索人工智能与数据科学领域。
+                    河海大学海洋气象方向硕士研究生，精通 WRF 气象模式与 GSI 同化系统，
+                    擅长 Python / Matlab 数据处理与机器学习，致力于气象与人工智能的交叉应用研究。
                 </p>
                 <div class="hero-actions">
                     <a class="btn btn-primary" href="#projects">
@@ -559,6 +613,13 @@
                         GitHub
                     </a>
                 </div>
+                <!-- 点赞 -->
+                <div class="like-section">
+                    <button class="like-btn" id="likeBtn" aria-label="点赞">
+                        <span class="heart">🤍</span> <span id="likeLabel">点赞</span>
+                    </button>
+                    <span class="like-count" id="likeCount"></span>
+                </div>
             </section>
 
             <!-- 关于我 -->
@@ -569,12 +630,12 @@
                         <h2>关于我</h2>
                     </div>
                     <p>
-                        我是一名充满热情的 Python 开发者，拥有丰富的全栈开发经验。擅长使用 Python 进行后端开发，
-                        同时熟悉前端技术栈。我相信优秀的代码不仅要能运行，更要易于理解和维护。
+                        河海大学海洋气象方向本硕连读（2019–2026），7 年专注于海洋与大气科学的数据分析与数值模拟研究。
+                        精通 WRF 气象模式与 GSI 同化系统，熟练使用 Python / Matlab / Shell 进行数据处理与可视化。
                     </p>
                     <p>
-                        在工作之余，我喜欢参与开源项目，分享技术心得。我认为技术应该用来解决实际问题、创造价值。
-                        目前我正在深入学习机器学习和数据分析，希望能在 AI 领域有所建树。
+                        硕士期间参与多项风电领域重点科研项目（金风科技、中国商飞等），独立开发两套雷达数据处理软件，
+                        具备从项目投标到验收结项的全流程经验。熟练使用 PyTorch 搭建 RF、LSTM、CNN、U-Net 等深度学习模型。
                     </p>
                 </div>
             </section>
@@ -588,21 +649,20 @@
                 </div>
                 <div class="skills">
                     <span class="skill-tag">Python</span>
-                    <span class="skill-tag">Django</span>
-                    <span class="skill-tag">Flask</span>
-                    <span class="skill-tag">FastAPI</span>
-                    <span class="skill-tag">JavaScript</span>
-                    <span class="skill-tag">React</span>
-                    <span class="skill-tag">Vue.js</span>
-                    <span class="skill-tag">HTML/CSS</span>
-                    <span class="skill-tag">MySQL</span>
-                    <span class="skill-tag">PostgreSQL</span>
-                    <span class="skill-tag">MongoDB</span>
-                    <span class="skill-tag">Redis</span>
-                    <span class="skill-tag">Docker</span>
-                    <span class="skill-tag">Git</span>
+                    <span class="skill-tag">Matlab</span>
+                    <span class="skill-tag">Shell</span>
+                    <span class="skill-tag">WRF 模式</span>
+                    <span class="skill-tag">GSI 同化</span>
+                    <span class="skill-tag">PyTorch</span>
+                    <span class="skill-tag">RF / LSTM</span>
+                    <span class="skill-tag">CNN / U-Net</span>
+                    <span class="skill-tag">GAN</span>
                     <span class="skill-tag">Linux</span>
-                    <span class="skill-tag">AWS</span>
+                    <span class="skill-tag">Fortran</span>
+                    <span class="skill-tag">机器学习</span>
+                    <span class="skill-tag">深度学习</span>
+                    <span class="skill-tag">数据分析</span>
+                    <span class="skill-tag">气象模拟</span>
                 </div>
             </section>
 
@@ -614,57 +674,73 @@
                     <p>我正在开发与维护的一些项目。</p>
                 </div>
                 <div class="projects-grid">
-                    <!-- TODO: 项目上线后，把 .badge 换成真实链接即可，例如
-                         <a class="project-link" href="https://github.com/mrchenxiangyu/xxx">查看详情 →</a> -->
                     <article class="project-card">
-                        <div class="icon">🚀</div>
-                        <h3>项目管理系统</h3>
-                        <p>基于 Django 开发的企业级项目管理平台，支持任务分配、进度跟踪与团队协作。</p>
-                        <span class="badge">筹备中</span>
+                        <div class="icon">🌊</div>
+                        <h3>盐城海域水文分析与一体化设计</h3>
+                        <p style="font-size:.85rem;color:var(--accent);margin-bottom:.5rem;">河海大学 · 金风科技（重点项目）</p>
+                        <p>利用 WRF 模式和 GSI 同化系统构建沿海高精准度气象模型，自主研发自动化并行计算脚本，成功提升风场模拟精度 20% 以上。</p>
+                        <span class="badge">2024.07 – 至今</span>
                     </article>
                     <article class="project-card">
-                        <div class="icon">📊</div>
-                        <h3>数据分析工具</h3>
-                        <p>使用 Python 与 Pandas 构建的数据分析工具，提供数据清洗、可视化与报表生成功能。</p>
-                        <span class="badge">筹备中</span>
+                        <div class="icon">💨</div>
+                        <h3>海上风资源精细化评估与预测</h3>
+                        <p style="font-size:.85rem;color:var(--accent);margin-bottom:.5rem;">河海大学 · 中山大学（联合基金重点）</p>
+                        <p>参与 WRF 气象模式调试与降尺度技术开发，撰写项目标书，致力于提升中国沿海风资源模拟精度。</p>
+                        <span class="badge">2024.07 – 至今</span>
                     </article>
                     <article class="project-card">
-                        <div class="icon">🤖</div>
-                        <h3>智能对话机器人</h3>
-                        <p>基于 NLP 技术的智能客服系统，支持多轮对话、意图识别与知识库管理。</p>
-                        <span class="badge">筹备中</span>
+                        <div class="icon">✈️</div>
+                        <h3>大侧风物理机理及多源数据预测</h3>
+                        <p style="font-size:.85rem;color:var(--accent);margin-bottom:.5rem;">中国商飞 · 河海大学 · 中山大学（横向）</p>
+                        <p>基于风廓线、自动站、激光雷达和卫星等多源数据，分析锡林浩特机场大侧风事件的影响因子，撰写案例分析报告。</p>
+                        <span class="badge">2025.03 – 至今</span>
                     </article>
                     <article class="project-card">
-                        <div class="icon">📱</div>
-                        <h3>移动应用后端</h3>
-                        <p>使用 FastAPI 构建的高性能 RESTful API，为移动应用提供稳定的后端服务。</p>
-                        <span class="badge">筹备中</span>
+                        <div class="icon">🌀</div>
+                        <h3>气象海洋虚拟仿真开发</h3>
+                        <p style="font-size:.85rem;color:var(--accent);margin-bottom:.5rem;">河海大学 · 智慧树 · 国防科技大学（横向）</p>
+                        <p>使用 Python 独立开发台风移动模型（β 效应、藤原效应），制作台风三维风速和温度结构数据。</p>
+                        <span class="badge">2025.03 – 至今</span>
                     </article>
                 </div>
             </section>
 
-            <!-- 工作经历 -->
+            <!-- 实习经历 -->
             <section id="experience" class="section reveal">
                 <div class="section-head">
                     <div class="eyebrow">Experience</div>
-                    <h2>工作经历</h2>
+                    <h2>实习经历</h2>
                 </div>
                 <div class="timeline">
-                    <!-- TODO: 替换为你的真实经历 -->
                     <div class="timeline-item">
-                        <h3>高级 Python 开发工程师</h3>
-                        <div class="date">2022 年 - 至今 | 某科技公司</div>
-                        <p>负责公司核心产品的后端架构设计与开发，带领团队完成多个重要项目，优化系统性能、提升用户体验。</p>
+                        <h3>算法工程师实习生</h3>
+                        <div class="date">2025.07 – 2025.10 | 南京牧镭激光科技股份有限公司</div>
+                        <p>使用 Python 分析研究多种测风雷达数据，独立开发并维护两套雷达数据处理软件。参与研发低空经济下气象模式与气象雷达的融合应用，为低空经济发展区域提供准确的风场和天气要素分布。</p>
                     </div>
                     <div class="timeline-item">
-                        <h3>全栈开发工程师</h3>
-                        <div class="date">2020 年 - 2022 年 | 某互联网公司</div>
-                        <p>参与多个 Web 项目的全栈开发，负责前后端技术选型与实现，建立自动化测试流程。</p>
+                        <h3>科研助理实习生</h3>
+                        <div class="date">2024.07 – 2025.06 | 江苏省南京气象科技创新研究院</div>
+                        <p>参与海风、海雾模拟模型研究，使用 WRF 模式提升海风、海雾模拟精度。基于 U-Net 框架利用卫星观测图像研发江苏区域海雾 AI 反演数据，学习出近 20 年高准确率海雾数据。</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 科研竞赛 -->
+            <section class="section reveal">
+                <div class="section-head">
+                    <div class="eyebrow">Awards</div>
+                    <h2>科研竞赛</h2>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h3>全国研究生数学建模竞赛（华为杯）三等奖</h3>
+                        <div class="date">2024 年</div>
+                        <p>搭建中国土地利用、人口分布与降水的关系模型，使用 RF、Bi-LSTM、CNN-LSTM 方法构建全国降水预测模型（D 题）。</p>
                     </div>
                     <div class="timeline-item">
-                        <h3>Python 开发工程师</h3>
-                        <div class="date">2018 年 - 2020 年 | 某创业公司</div>
-                        <p>从零构建公司技术体系，使用 Django 开发企业管理系统，设计数据库架构并编写 API 文档。</p>
+                        <h3>大学生创新创业训练计划项目（校级）</h3>
+                        <div class="date">2021 – 2022 年</div>
+                        <p>担任项目负责人，分析超强台风「烟花」异常路径的主要影响因素，负责实验方法选取、数据可视化与分析、论文撰写和答辩。</p>
                     </div>
                 </div>
             </section>
@@ -676,11 +752,15 @@
                     <h2>教育背景</h2>
                 </div>
                 <div class="timeline">
-                    <!-- TODO: 替换为你的真实教育信息 -->
                     <div class="timeline-item">
-                        <h3>计算机科学与技术 · 本科</h3>
-                        <div class="date">2014 年 - 2018 年 | 某某大学</div>
-                        <p>主修计算机科学与技术专业，曾获得优秀毕业生等奖项与荣誉。</p>
+                        <h3>资源与环境（海洋气象）· 硕士研究生</h3>
+                        <div class="date">2023.09 – 2026.06 | 河海大学</div>
+                        <p>主修实用数值分析、应用统计、海洋观测与数据处理、海洋卫星遥感技术。获 2023、2025 年研究生学业二等奖学金，2024 年华为杯数学建模竞赛三等奖。毕业论文：《基于 3D-var 同化的中国东南沿海区域风资源精细化评估研究》。</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>海洋科学（物理海洋学）· 本科</h3>
+                        <div class="date">2019.09 – 2023.06 | 河海大学</div>
+                        <p>主修数值分析、Fortran90、大气科学概论、海洋环境要素分析、卫星海洋学、Matlab。毕业论文：《2106 号台风"烟花"异常路径的影响因素研究》。</p>
                     </div>
                 </div>
             </section>
@@ -691,11 +771,9 @@
                     <h2>联系我</h2>
                     <p>有任何问题或合作意向，欢迎通过以下方式联系我。</p>
                     <div class="contact-links">
-                        <!-- TODO: 替换为你的真实邮箱 / 电话 / LinkedIn -->
-                        <a href="mailto:chenxiangyu@example.com">✉️ chenxiangyu@example.com</a>
+                        <a href="mailto:xiangyuchen@hhu.edu.cn">✉️ xiangyuchen@hhu.edu.cn</a>
                         <a href="https://github.com/mrchenxiangyu" target="_blank" rel="noopener">💻 GitHub</a>
-                        <a href="https://linkedin.com/in/chenxiangyu" target="_blank" rel="noopener">💼 LinkedIn</a>
-                        <a href="tel:+8613800138000">📱 138-0013-8000</a>
+                        <a href="tel:+8613770613553">📱 137-7061-3553</a>
                     </div>
                 </div>
             </section>
@@ -704,11 +782,9 @@
             <section id="download-resume" class="section reveal">
                 <div class="resume-card">
                     <h2>获取我的简历</h2>
-                    <p>选择你需要的格式下载我的最新简历。</p>
+                    <p>点击下方按钮下载我的最新个人简历。</p>
                     <div class="resume-actions">
-                        <!-- TODO: 将你的简历 PDF 放入 files/ 目录，命名为 resume-zh.pdf 与 resume-en.pdf 即可生效 -->
-                        <a href="files/resume-zh.pdf" class="btn btn-primary" download>📄 中文简历 (PDF)</a>
-                        <a href="files/resume-en.pdf" class="btn" download>📄 English Resume (PDF)</a>
+                        <a href="files/resume/个人简历-陈翔宇.pdf" class="btn btn-primary" download>📄 下载简历 (PDF)</a>
                     </div>
                     <p style="margin-top: 1.5rem; font-size: .85rem; color: var(--muted);">简历定期更新 · 最后更新：2026 年 7 月</p>
                 </div>
@@ -740,7 +816,6 @@
             const open = navLinks.classList.toggle('open');
             navToggle.setAttribute('aria-expanded', open);
         });
-        // 点击菜单项后自动收起
         navLinks.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('open');
@@ -795,6 +870,44 @@
                 }
             });
         });
+
+        // ========== 点赞功能 ==========
+        (function() {
+            const storageKey = 'page_likes_xiangyu';
+            const btn = document.getElementById('likeBtn');
+            const countEl = document.getElementById('likeCount');
+            const labelEl = document.getElementById('likeLabel');
+            const heartEl = btn.querySelector('.heart');
+
+            let data = JSON.parse(localStorage.getItem(storageKey)) || { count: 0, liked: false };
+
+            function render() {
+                countEl.textContent = data.count > 0 ? data.count + ' 人觉得很赞' : '';
+                if (data.liked) {
+                    btn.classList.add('liked');
+                    heartEl.textContent = '❤️';
+                    labelEl.textContent = '已点赞';
+                } else {
+                    btn.classList.remove('liked');
+                    heartEl.textContent = '🤍';
+                    labelEl.textContent = '点赞';
+                }
+            }
+
+            btn.addEventListener('click', () => {
+                if (!data.liked) {
+                    data.liked = true;
+                    data.count++;
+                } else {
+                    data.liked = false;
+                    data.count = Math.max(0, data.count - 1);
+                }
+                localStorage.setItem(storageKey, JSON.stringify(data));
+                render();
+            });
+
+            render();
+        })();
     </script>
 </body>
 </html>
