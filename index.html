@@ -36,7 +36,7 @@
         "image": "https://avatars.githubusercontent.com/u/110710255?v=4",
         "jobTitle": "海洋气象算法工程师",
         "sameAs": ["https://github.com/mrchenxiangyu"],
-        "description": "河海大学海洋气象硕士，精通WRF模式与GSI同化系统，擅长Python/Matlab数据处理与机器学习。"
+        "description": "河海大学海洋气象硕士，精通WRF模式与GSI同化系统，擅长Python/Matlab数据处理与深度学习。"
     }
     </script>
 
@@ -594,6 +594,7 @@
         <div class="container">
             <!-- 英雄区域 -->
             <section class="hero reveal">
+                <!-- 使用 GitHub 头像，自动获取你 GitHub 账号的头像 -->
                 <div class="avatar-wrap">
                     <img class="avatar" src="https://avatars.githubusercontent.com/u/110710255?v=4" alt="陈翔宇的头像">
                 </div>
@@ -630,12 +631,12 @@
                         <h2>关于我</h2>
                     </div>
                     <p>
-                        河海大学海洋气象方向本硕连读（2019–2026），7 年专注于海洋与大气科学的数据分析与数值模拟研究。
+                        河海大学海洋气象方向（本科＋硕士，2019–2026），7 年专注于海洋与大气科学的数据分析与数值模拟研究。
                         精通 WRF 气象模式与 GSI 同化系统，熟练使用 Python / Matlab / Shell 进行数据处理与可视化。
                     </p>
                     <p>
                         硕士期间参与多项风电领域重点科研项目（金风科技、中国商飞等），独立开发两套雷达数据处理软件，
-                        具备从项目投标到验收结项的全流程经验。熟练使用 PyTorch 搭建 RF、LSTM、CNN、U-Net 等深度学习模型。
+                        具备从项目投标到验收结项的全流程经验。熟练搭建 RF、LSTM、CNN、U-Net 等深度学习模型。
                     </p>
                 </div>
             </section>
@@ -653,10 +654,6 @@
                     <span class="skill-tag">Shell</span>
                     <span class="skill-tag">WRF 模式</span>
                     <span class="skill-tag">GSI 同化</span>
-                    <span class="skill-tag">PyTorch</span>
-                    <span class="skill-tag">RF / LSTM</span>
-                    <span class="skill-tag">CNN / U-Net</span>
-                    <span class="skill-tag">GAN</span>
                     <span class="skill-tag">Linux</span>
                     <span class="skill-tag">Fortran</span>
                     <span class="skill-tag">机器学习</span>
@@ -670,8 +667,8 @@
             <section id="projects" class="section reveal">
                 <div class="section-head">
                     <div class="eyebrow">Projects</div>
-                    <h2>项目展示</h2>
-                    <p>我正在开发与维护的一些项目。</p>
+                    <h2>项目经历</h2>
+                    <p>项目经历</p>
                 </div>
                 <div class="projects-grid">
                     <article class="project-card">
@@ -679,28 +676,28 @@
                         <h3>盐城海域水文分析与一体化设计</h3>
                         <p style="font-size:.85rem;color:var(--accent);margin-bottom:.5rem;">河海大学 · 金风科技（重点项目）</p>
                         <p>利用 WRF 模式和 GSI 同化系统构建沿海高精准度气象模型，自主研发自动化并行计算脚本，成功提升风场模拟精度 20% 以上。</p>
-                        <span class="badge">2024.07 – 至今</span>
+                        <span class="badge">2024.07 – 2026.06</span>
                     </article>
                     <article class="project-card">
                         <div class="icon">💨</div>
                         <h3>海上风资源精细化评估与预测</h3>
                         <p style="font-size:.85rem;color:var(--accent);margin-bottom:.5rem;">河海大学 · 中山大学（联合基金重点）</p>
                         <p>参与 WRF 气象模式调试与降尺度技术开发，撰写项目标书，致力于提升中国沿海风资源模拟精度。</p>
-                        <span class="badge">2024.07 – 至今</span>
+                        <span class="badge">2024.07 – 2025.12</span>
                     </article>
                     <article class="project-card">
                         <div class="icon">✈️</div>
                         <h3>大侧风物理机理及多源数据预测</h3>
                         <p style="font-size:.85rem;color:var(--accent);margin-bottom:.5rem;">中国商飞 · 河海大学 · 中山大学（横向）</p>
                         <p>基于风廓线、自动站、激光雷达和卫星等多源数据，分析锡林浩特机场大侧风事件的影响因子，撰写案例分析报告。</p>
-                        <span class="badge">2025.03 – 至今</span>
+                        <span class="badge">2025.03 – 2025.12</span>
                     </article>
                     <article class="project-card">
                         <div class="icon">🌀</div>
                         <h3>气象海洋虚拟仿真开发</h3>
                         <p style="font-size:.85rem;color:var(--accent);margin-bottom:.5rem;">河海大学 · 智慧树 · 国防科技大学（横向）</p>
                         <p>使用 Python 独立开发台风移动模型（β 效应、藤原效应），制作台风三维风速和温度结构数据。</p>
-                        <span class="badge">2025.03 – 至今</span>
+                        <span class="badge">2025.03 – 2025.12</span>
                     </article>
                 </div>
             </section>
@@ -816,6 +813,7 @@
             const open = navLinks.classList.toggle('open');
             navToggle.setAttribute('aria-expanded', open);
         });
+        // 点击菜单项后自动收起
         navLinks.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('open');
